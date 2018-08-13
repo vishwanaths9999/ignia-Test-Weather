@@ -1,0 +1,31 @@
+﻿@model IEnumerable<DataLayer.City>
+
+@{
+    ViewBag.Title = "City";
+}
+
+<h2>City</h2>
+
+
+<table class="table" border="1">
+    <tr>
+        
+        <th>
+            City Name            
+        </th>
+        <th> Action </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>        
+        <td>
+            @Html.DisplayFor(modelItem => item.LocalizedName)
+        </td>
+        <td>
+            @Html.ActionLink("Select", "CitySelected", new {@key = item.Key , @strCityName = item.LocalizedName })             
+            
+        </td>
+    </tr>
+}
+
+</table>

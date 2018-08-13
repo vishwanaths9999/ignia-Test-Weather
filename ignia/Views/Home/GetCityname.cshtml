@@ -1,0 +1,19 @@
+﻿@model DataLayer.Country
+
+@{
+    ViewBag.Title = "First 3 leters of City name";
+}
+
+<p>
+    <h2> Please enter first 3 letters of city name </h2>
+</p>
+
+
+@using (Html.BeginForm("City", "Home", FormMethod.Post))
+{
+
+    <h2>City name</h2>  @Html.TextAreaFor(m => m.LocalizedName)
+    @Html.HiddenFor(m => m.ID)
+    <input type="submit" value="Ok" />
+}
+

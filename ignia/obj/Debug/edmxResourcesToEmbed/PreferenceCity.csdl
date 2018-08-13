@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TESTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="cityDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Citykey" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="CityNAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Citykey" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="PreferenceCity" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="cityDetails" EntityType="Self.cityDetail" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CityPreferenceModelStoreContainer" CdmEntityContainer="CityPreference">
+    <EntitySetMapping Name="cityDetails">
+      <EntityTypeMapping TypeName="CityPreferenceModel.cityDetail">
+        <MappingFragment StoreEntitySet="cityDetails">
+          <ScalarProperty Name="Citykey" ColumnName="Citykey" />
+          <ScalarProperty Name="CityNAME" ColumnName="CityNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

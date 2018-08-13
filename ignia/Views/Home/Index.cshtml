@@ -1,0 +1,35 @@
+﻿@model IEnumerable<DataLayer.Region>
+
+@{
+    ViewBag.Title = "Ignia Test Weather Report";
+}
+
+<h2>Ignia Test Weather Report</h2>
+
+<p>
+    @using (Html.BeginForm("Preference", "Home", FormMethod.Post))
+    {
+        <input type="submit" value="Preference" />
+    }
+
+</p>
+<table class="table" border="1">
+    <tr>        
+        <th>           
+             Country
+        </th>
+
+        <th> Select </th>
+    </tr>
+@foreach (var item in Model) {
+    <tr>        
+        <td>
+            @Html.DisplayFor(modelItem => item.EnglishName)
+        </td>
+        <td>            
+            @Html.ActionLink("Select","Country", new {id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
